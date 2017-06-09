@@ -2279,7 +2279,7 @@
               <disabled>FALSE</disabled>
               <executes_submit_callback>FALSE</executes_submit_callback>
               <multiple>FALSE</multiple>
-              <required>FALSE</required>
+              <required>TRUE</required>
               <resizable>FALSE</resizable>
               <title>Use and Reproduction</title>
               <tree>TRUE</tree>
@@ -2305,95 +2305,153 @@
             </properties>
             <children/>
           </element>
-          <element name="rightsStatementText">
+          <element name="rightsStatementFieldset">
             <properties>
-              <type>select</type>
+              <type>fieldset</type>
               <access>TRUE</access>
               <collapsed>FALSE</collapsed>
               <collapsible>FALSE</collapsible>
-              <default_value>No Known Copyright</default_value>
               <disabled>FALSE</disabled>
               <executes_submit_callback>FALSE</executes_submit_callback>
               <multiple>FALSE</multiple>
-              <options>
-                <index key="In Copyright">In Copyright</index>
-                <index key="Copyright Not Evaluated">Copyright Not Evaluated</index>
-                <index key="Copyright Undetermined">Copyright Undetermined</index>
-                <index key="No Known Copyright">No Known Copyright</index>
-              </options>
-              <required>TRUE</required>
+              <required>FALSE</required>
               <resizable>FALSE</resizable>
-              <title>Rights Statement Text</title>
+              <title>Rights Statement</title>
               <tree>TRUE</tree>
               <actions>
                 <create>
                   <path>self::node()</path>
                   <context>parent</context>
                   <schema/>
-                  <type>xml</type>
+                  <type>element</type>
                   <prefix>NULL</prefix>
-                  <value>%value%&lt;/accessCondition&gt;</value>
+                  <value>accessCondition</value>
                 </create>
                 <read>
-                  <path>mods:accessCondition[@type='rightsStatement']</path>
+                  <path>mods:accessCondition[@type="rightsStatement"]</path>
                   <context>parent</context>
                 </read>
-                <update>
-                  <path>self::node()</path>
-                  <context>self</context>
-                </update>
+                <update>NULL</update>
                 <delete>
                   <path>self::node()</path>
                   <context>self</context>
                 </delete>
               </actions>
             </properties>
-            <children/>
-          </element>
-          <element name="rightsStatementURI">
-            <properties>
-              <type>select</type>
-              <access>TRUE</access>
-              <collapsed>FALSE</collapsed>
-              <collapsible>FALSE</collapsible>
-              <default_value>http://rightsstatements.org/vocab/NKC/1.0/</default_value>
-              <disabled>FALSE</disabled>
-              <executes_submit_callback>FALSE</executes_submit_callback>
-              <multiple>FALSE</multiple>
-              <options>
-                <index key="http://rightsstatements.org/vocab/InC/1.0/">In Copyright</index>
-                <index key="http://rightsstatements.org/vocab/CNE/1.0/">Copyright Not Evaluated</index>
-                <index key="http://rightsstatements.org/vocab/UND/1.0/">Copyright Undetermined</index>
-                <index key="http://rightsstatements.org/vocab/NKC/1.0/">No Known Copyright</index>
-              </options>
-              <required>TRUE</required>
-              <resizable>FALSE</resizable>
-              <title>Rights Statement URI</title>
-              <tree>TRUE</tree>
-              <actions>
-                <create>
-                  <path>self::node()</path>
-                  <context>parent</context>
-                  <schema/>
-                  <type>xml</type>
-                  <prefix>NULL</prefix>
-                  <value>&lt;accessCondition type="rightsStatement" xlink:href="%value%"&gt;</value>
-                </create>
-                <read>
-                  <path>mods:accessCondition[@type='rightsStatement']/@xlink:href</path>
-                  <context>parent</context>
-                </read>
-                <update>
-                  <path>self::node()</path>
-                  <context>self</context>
-                </update>
-                <delete>
-                  <path>self::node()</path>
-                  <context>self</context>
-                </delete>
-              </actions>
-            </properties>
-            <children/>
+            <children>
+              <element name="rightsStatementText">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <default_value>No Known Copyright</default_value>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key="In Copyright">In Copyright</index>
+                    <index key="Copyright Not Evaluated">Copyright Not Evaluated</index>
+                    <index key="Copyright Undetermined">Copyright Undetermined</index>
+                    <index key="No Known Copyright">No Known Copyright</index>
+                  </options>
+                  <required>TRUE</required>
+                  <resizable>FALSE</resizable>
+                  <title>Rights Statement Text</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>NULL</create>
+                    <read>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                    </update>
+                    <delete>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+              <element name="rightsStatementURI">
+                <properties>
+                  <type>select</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <default_value>http://rightsstatements.org/vocab/NKC/1.0/</default_value>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <options>
+                    <index key="http://rightsstatements.org/vocab/InC/1.0/">In Copyright</index>
+                    <index key="http://rightsstatements.org/vocab/CNE/1.0/">Copyright Not Evaluated</index>
+                    <index key="http://rightsstatements.org/vocab/UND/1.0/">Copyright Undetermined</index>
+                    <index key="http://rightsstatements.org/vocab/NKC/1.0/">No Known Copyright</index>
+                  </options>
+                  <required>TRUE</required>
+                  <resizable>FALSE</resizable>
+                  <title>Rights Statement URI</title>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>xlink</prefix>
+                      <value>xlink:href</value>
+                    </create>
+                    <read>
+                      <path>@xlink:href</path>
+                      <context>parent</context>
+                    </read>
+                    <update>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </update>
+                    <delete>
+                      <path>self::node()</path>
+                      <context>self</context>
+                    </delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+              <element name="rightsStatementAttr">
+                <properties>
+                  <type>hidden</type>
+                  <access>TRUE</access>
+                  <collapsed>FALSE</collapsed>
+                  <collapsible>FALSE</collapsible>
+                  <default_value>rightsStatement</default_value>
+                  <disabled>FALSE</disabled>
+                  <executes_submit_callback>FALSE</executes_submit_callback>
+                  <multiple>FALSE</multiple>
+                  <required>FALSE</required>
+                  <resizable>FALSE</resizable>
+                  <tree>TRUE</tree>
+                  <actions>
+                    <create>
+                      <path>self::node()</path>
+                      <context>parent</context>
+                      <schema/>
+                      <type>attribute</type>
+                      <prefix>NULL</prefix>
+                      <value>type</value>
+                    </create>
+                    <read>NULL</read>
+                    <update>NULL</update>
+                    <delete>NULL</delete>
+                  </actions>
+                </properties>
+                <children/>
+              </element>
+            </children>
           </element>
         </children>
       </element>
