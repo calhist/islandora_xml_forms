@@ -74,7 +74,7 @@
               <multiple>FALSE</multiple>
               <required>FALSE</required>
               <resizable>FALSE</resizable>
-              <title>Non Sort</title>
+              <title>Non-Sorting Title Part</title>
               <tree>TRUE</tree>
               <actions>
                 <create>
@@ -1554,6 +1554,7 @@
               <access>TRUE</access>
               <collapsed>FALSE</collapsed>
               <collapsible>FALSE</collapsible>
+              <default_value>All requests to reproduce, publish, quote from or otherwise use collection materials must be submitted in writing to the Director of Library and Archives. Consent is given on behalf of the California Historical Society as the owner of the physical items and is not intended to include or imply permission from the copyright owner. Such permission must be obtained from the copyright owner. Restrictions also apply to digital representations of the original materials. Use of digital files is restricted to research and educational purposes. Responsibility for any use, including copying, transmitting, or making any other use of protected images, rests exclusively with the user. Upon request, digitized works can be removed from public view if there are rights issues that need to be resolved.</default_value>
               <disabled>FALSE</disabled>
               <executes_submit_callback>FALSE</executes_submit_callback>
               <multiple>FALSE</multiple>
@@ -1632,8 +1633,7 @@
                   <multiple>FALSE</multiple>
                   <options>
                     <index key="In Copyright">In Copyright</index>
-                    <index key="Copyright Not Evaluated">Copyright Not Evaluated</index>
-                    <index key="Copyright Undetermined">Copyright Undetermined</index>
+                    <index key="No Copyright - United States">No Copyright - United States</index>
                     <index key="No Known Copyright">No Known Copyright</index>
                   </options>
                   <required>TRUE</required>
@@ -1670,8 +1670,7 @@
                   <multiple>FALSE</multiple>
                   <options>
                     <index key="http://rightsstatements.org/vocab/InC/1.0/">In Copyright</index>
-                    <index key="http://rightsstatements.org/vocab/CNE/1.0/">Copyright Not Evaluated</index>
-                    <index key="http://rightsstatements.org/vocab/UND/1.0/">Copyright Undetermined</index>
+                    <index key="http://rightsstatements.org/vocab/NoC-US/1.0/">No Copyright - United States</index>
                     <index key="http://rightsstatements.org/vocab/NKC/1.0/">No Known Copyright</index>
                   </options>
                   <required>TRUE</required>
@@ -1951,6 +1950,116 @@
           </element>
         </children>
       </element>
+      <element name="location">
+        <properties>
+          <type>fieldset</type>
+          <access>TRUE</access>
+          <collapsed>FALSE</collapsed>
+          <collapsible>FALSE</collapsible>
+          <disabled>FALSE</disabled>
+          <executes_submit_callback>FALSE</executes_submit_callback>
+          <multiple>FALSE</multiple>
+          <required>FALSE</required>
+          <resizable>FALSE</resizable>
+          <title>Location</title>
+          <tree>TRUE</tree>
+          <actions>
+            <create>
+              <path>self::node()</path>
+              <context>parent</context>
+              <schema/>
+              <type>element</type>
+              <prefix>NULL</prefix>
+              <value>location</value>
+            </create>
+            <read>
+              <path>mods:location</path>
+              <context>parent</context>
+            </read>
+            <update>NULL</update>
+            <delete>NULL</delete>
+          </actions>
+        </properties>
+        <children>
+          <element name="physicalLocation">
+            <properties>
+              <type>textfield</type>
+              <access>TRUE</access>
+              <collapsed>FALSE</collapsed>
+              <collapsible>FALSE</collapsible>
+              <default_value>California Historical Society</default_value>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
+              <required>FALSE</required>
+              <resizable>FALSE</resizable>
+              <title>Physical locaiton</title>
+              <tree>TRUE</tree>
+              <actions>
+                <create>
+                  <path>self::node()</path>
+                  <context>parent</context>
+                  <schema/>
+                  <type>element</type>
+                  <prefix>NULL</prefix>
+                  <value>physicalLocation</value>
+                </create>
+                <read>
+                  <path>mods:physicalLocation</path>
+                  <context>parent</context>
+                </read>
+                <update>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </update>
+                <delete>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </delete>
+              </actions>
+            </properties>
+            <children/>
+          </element>
+          <element name="shelfLocation">
+            <properties>
+              <type>textfield</type>
+              <access>TRUE</access>
+              <collapsed>FALSE</collapsed>
+              <collapsible>FALSE</collapsible>
+              <disabled>FALSE</disabled>
+              <executes_submit_callback>FALSE</executes_submit_callback>
+              <multiple>FALSE</multiple>
+              <required>FALSE</required>
+              <resizable>FALSE</resizable>
+              <title>Shelf location</title>
+              <tree>TRUE</tree>
+              <actions>
+                <create>
+                  <path>self::node()</path>
+                  <context>parent</context>
+                  <schema/>
+                  <type>element</type>
+                  <prefix>NULL</prefix>
+                  <value>shelfLocator</value>
+                </create>
+                <read>
+                  <path>mods:shelfLocator</path>
+                  <context>parent</context>
+                </read>
+                <update>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </update>
+                <delete>
+                  <path>self::node()</path>
+                  <context>self</context>
+                </delete>
+              </actions>
+            </properties>
+            <children/>
+          </element>
+        </children>
+      </element>
       <element name="relatedItem">
         <properties>
           <type>fieldset</type>
@@ -2068,7 +2177,7 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>Name of the collection</description>
+                  <description>Title of the parent collection or other related item.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
@@ -2106,6 +2215,7 @@
               <access>TRUE</access>
               <collapsed>FALSE</collapsed>
               <collapsible>FALSE</collapsible>
+              <description>Name associated with the related item.</description>
               <disabled>FALSE</disabled>
               <executes_submit_callback>FALSE</executes_submit_callback>
               <multiple>FALSE</multiple>
@@ -2243,6 +2353,7 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
+                  <default_value>California Historical Society</default_value>
                   <description>The institution or repository that holds the resource or where it is available.</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
