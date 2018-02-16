@@ -1531,6 +1531,7 @@
               <access>TRUE</access>
               <collapsed>FALSE</collapsed>
               <collapsible>FALSE</collapsible>
+              <default_value>All requests to reproduce, publish, quote from or otherwise use collection materials must be submitted in writing to the Director of Library and Archives. Consent is given on behalf of the California Historical Society as the owner of the physical items and is not intended to include or imply permission from the copyright owner. Such permission must be obtained from the copyright owner. Restrictions also apply to digital representations of the original materials. Use of digital files is restricted to research and educational purposes. Responsibility for any use, including copying, transmitting, or making any other use of protected images, rests exclusively with the user. Upon request, digitized works can be removed from public view if there are rights issues that need to be resolved.</default_value>
               <disabled>FALSE</disabled>
               <executes_submit_callback>FALSE</executes_submit_callback>
               <multiple>FALSE</multiple>
@@ -1608,9 +1609,10 @@
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
                   <options>
-                    <index key="In Copyright">In Copyright</index>
                     <index key="Copyright Not Evaluated">Copyright Not Evaluated</index>
                     <index key="Copyright Undetermined">Copyright Undetermined</index>
+                    <index key="In Copyright">In Copyright</index>
+                    <index key="No Copyright - United States">No Copyright - United States</index>
                     <index key="No Known Copyright">No Known Copyright</index>
                   </options>
                   <required>TRUE</required>
@@ -1646,9 +1648,10 @@
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
                   <options>
-                    <index key="http://rightsstatements.org/vocab/InC/1.0/">In Copyright</index>
                     <index key="http://rightsstatements.org/vocab/CNE/1.0/">Copyright Not Evaluated</index>
                     <index key="http://rightsstatements.org/vocab/UND/1.0/">Copyright Undetermined</index>
+                    <index key="http://rightsstatements.org/vocab/InC/1.0/">In Copyright</index>
+                    <index key="http://rightsstatements.org/vocab/NoC-US/1.0/">No Copyright - United States</index>
                     <index key="http://rightsstatements.org/vocab/NKC/1.0/">No Known Copyright</index>
                   </options>
                   <required>TRUE</required>
