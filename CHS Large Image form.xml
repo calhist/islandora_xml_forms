@@ -1632,6 +1632,8 @@
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
                   <options>
+                    <index key="Copyright Not Evaluated">Copyright Not Evaluated</index>
+                    <index key="Copyright Undetermined">Copyright Undetermined</index>
                     <index key="In Copyright">In Copyright</index>
                     <index key="No Copyright - United States">No Copyright - United States</index>
                     <index key="No Known Copyright">No Known Copyright</index>
@@ -1669,6 +1671,8 @@
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
                   <options>
+                    <index key="http://rightsstatements.org/vocab/CNE/1.0/">Copyright Not Evaluated</index>
+                    <index key="http://rightsstatements.org/vocab/UND/1.0/">Copyright Undetermined</index>
                     <index key="http://rightsstatements.org/vocab/InC/1.0/">In Copyright</index>
                     <index key="http://rightsstatements.org/vocab/NoC-US/1.0/">No Copyright - United States</index>
                     <index key="http://rightsstatements.org/vocab/NKC/1.0/">No Known Copyright</index>
@@ -1947,116 +1951,6 @@
                 </children>
               </element>
             </children>
-          </element>
-        </children>
-      </element>
-      <element name="location">
-        <properties>
-          <type>fieldset</type>
-          <access>TRUE</access>
-          <collapsed>FALSE</collapsed>
-          <collapsible>FALSE</collapsible>
-          <disabled>FALSE</disabled>
-          <executes_submit_callback>FALSE</executes_submit_callback>
-          <multiple>FALSE</multiple>
-          <required>FALSE</required>
-          <resizable>FALSE</resizable>
-          <title>Location</title>
-          <tree>TRUE</tree>
-          <actions>
-            <create>
-              <path>self::node()</path>
-              <context>parent</context>
-              <schema/>
-              <type>element</type>
-              <prefix>NULL</prefix>
-              <value>location</value>
-            </create>
-            <read>
-              <path>mods:location</path>
-              <context>parent</context>
-            </read>
-            <update>NULL</update>
-            <delete>NULL</delete>
-          </actions>
-        </properties>
-        <children>
-          <element name="physicalLocation">
-            <properties>
-              <type>textfield</type>
-              <access>TRUE</access>
-              <collapsed>FALSE</collapsed>
-              <collapsible>FALSE</collapsible>
-              <default_value>California Historical Society</default_value>
-              <disabled>FALSE</disabled>
-              <executes_submit_callback>FALSE</executes_submit_callback>
-              <multiple>FALSE</multiple>
-              <required>FALSE</required>
-              <resizable>FALSE</resizable>
-              <title>Physical locaiton</title>
-              <tree>TRUE</tree>
-              <actions>
-                <create>
-                  <path>self::node()</path>
-                  <context>parent</context>
-                  <schema/>
-                  <type>element</type>
-                  <prefix>NULL</prefix>
-                  <value>physicalLocation</value>
-                </create>
-                <read>
-                  <path>mods:physicalLocation</path>
-                  <context>parent</context>
-                </read>
-                <update>
-                  <path>self::node()</path>
-                  <context>self</context>
-                </update>
-                <delete>
-                  <path>self::node()</path>
-                  <context>self</context>
-                </delete>
-              </actions>
-            </properties>
-            <children/>
-          </element>
-          <element name="shelfLocation">
-            <properties>
-              <type>textfield</type>
-              <access>TRUE</access>
-              <collapsed>FALSE</collapsed>
-              <collapsible>FALSE</collapsible>
-              <disabled>FALSE</disabled>
-              <executes_submit_callback>FALSE</executes_submit_callback>
-              <multiple>FALSE</multiple>
-              <required>FALSE</required>
-              <resizable>FALSE</resizable>
-              <title>Shelf location</title>
-              <tree>TRUE</tree>
-              <actions>
-                <create>
-                  <path>self::node()</path>
-                  <context>parent</context>
-                  <schema/>
-                  <type>element</type>
-                  <prefix>NULL</prefix>
-                  <value>shelfLocator</value>
-                </create>
-                <read>
-                  <path>mods:shelfLocator</path>
-                  <context>parent</context>
-                </read>
-                <update>
-                  <path>self::node()</path>
-                  <context>self</context>
-                </update>
-                <delete>
-                  <path>self::node()</path>
-                  <context>self</context>
-                </delete>
-              </actions>
-            </properties>
-            <children/>
           </element>
         </children>
       </element>
@@ -2390,13 +2284,13 @@
                   <access>TRUE</access>
                   <collapsed>FALSE</collapsed>
                   <collapsible>FALSE</collapsible>
-                  <description>The URL or PURL of the resource.</description>
+                  <description>Link to the Online Archive of California Finding Aid for the collection</description>
                   <disabled>FALSE</disabled>
                   <executes_submit_callback>FALSE</executes_submit_callback>
                   <multiple>FALSE</multiple>
                   <required>FALSE</required>
                   <resizable>FALSE</resizable>
-                  <title>URL</title>
+                  <title>Finding Aid</title>
                   <tree>TRUE</tree>
                   <actions>
                     <create>
